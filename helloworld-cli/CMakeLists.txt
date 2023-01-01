@@ -1,23 +1,82 @@
-cmake_minimum_required(VERSION 3.14)
+cmake_minimum_required(VERSION 3.12)
 
-project(helloworld-cli LANGUAGES CXX)
+set(PATCH_VERSION "1" CACHE INTERNAL "Patch version")
+set(PROJECT_VESRION 0.0.${PATCH_VERSION})
 
-set(CMAKE_INCLUDE_CURRENT_DIR ON)
+project(helloworld VERSION ${PROJECT_VESRION})
 
-set(CMAKE_AUTOUIC ON)
-set(CMAKE_AUTOMOC ON)
-set(CMAKE_AUTORCC ON)
+option(WITH_GTEST "Whether to build google test" ON)
 
-set(CMAKE_CXX_STANDARD 17)
-set(CMAKE_CXX_STANDARD_REQUIRED ON)
+configure_file(version.h.in version.h)
 
-find_package(QT NAMES Qt6 Qt5 REQUIRED COMPONENTS Core)
-find_package(Qt${QT_VERSION_MAJOR} REQUIRED COMPONENTS Core)
+add_executable(helloworld_cli main.cpp)
+add_library(helloworld lib.cpp)
 
-add_executable(helloworld-cli
-  main.cpp
+set_target_properties(helloworld_cli helloworld PROPERTIES
+    CXX_STANDARD 14
+    CXX_STANDARD_REQUIRED ON
 )
-target_link_libraries(helloworld-cli Qt${QT_VERSION_MAJOR}::Core)
 
-install(TARGETS helloworld-cli
-    LIBRARY DESTINATION ${CMAKE_INSTALL_LIBDIR})
+target_include_directories(helloworld
+    PRIVATE "${CMAKE_BINARY_DIR}"
+)
+
+target_link_libraries(helloworld_cli PRIVATE
+    helloworld
+)
+
+if(WITH_GTEST)
+    find_package(GTest)
+
+    add_executable(test_version test_version.cpp)
+
+    set_target_properties(test_version PROPERTIES
+        CXX_STANDARD 14
+        CXX_STANDARD_REQUIRED ON
+    )
+
+    target_link_libraries(test_version
+        GTest::gtest_main
+        helloworld
+    )
+endif()
+
+if (MSVC)
+    target_compile_options(helloworld_cli PRIVATE
+        /W4
+    )
+    target_compile_options(helloworld PRIVATE
+        /W4
+    )
+    if(WITH_GTEST)
+        target_compile_options(test_version PRIVATE
+            /W4
+    )
+    endif()
+else ()
+    target_compile_options(helloworld_cli PRIVATE
+        -Wall -Wextra -pedantic -Werror
+    )
+    target_compile_options(helloworld PRIVATE
+        -Wall -Wextra -pedantic -Werror
+    )
+    if(WITH_GTEST)
+        target_compile_options(test_version PRIVATE
+            -Wall -Wextra -pedantic -Werror
+    )
+    endif()
+endif()
+
+install(TARGETS helloworld_cli RUNTIME DESTINATION bin)
+
+set(CPACK_GENERATOR DEB)
+set(CPACK_PACKAGE_VERSION_MAJOR "${PROJECT_VERSION_MAJOR}")
+set(CPACK_PACKAGE_VERSION_MINOR "${PROJECT_VERSION_MINOR}")
+set(CPACK_PACKAGE_VERSION_PATCH "${PROJECT_VERSION_PATCH}")
+set(CPACK_PACKAGE_CONTACT example@example.com)
+include(CPack)
+
+if(WITH_GTEST)
+    enable_testing()
+    add_test(test_version test_version)
+endif()

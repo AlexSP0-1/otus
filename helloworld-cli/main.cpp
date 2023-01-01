@@ -1,8 +1,10 @@
-#include <QCoreApplication>
+#include "lib.h"
 
-int main(int argc, char *argv[])
+#include <iostream>
+
+int main(int, char **)
 {
-    QCoreApplication a(argc, argv);
-
-    return a.exec();
+    std::cout << "Version: " << version() << std::endl;
+    std::cout << "Hello, world!" << std::endl;
+    return 0;
 }
