@@ -1,6 +1,11 @@
 cmake_minimum_required(VERSION 3.14)
 
-project(ip-filter LANGUAGES CXX)
+set(PATCH_VERSION "1" CACHE INTERNAL "Patch version")
+set(PROJECT_VERSION 0.0.${PATCH_VERSION})
+
+project(ip_filter VERSION ${PROJECT_VERSION})
+
+option(WITH_GTEST "Whether to build google test" ON)
 
 set(CMAKE_INCLUDE_CURRENT_DIR ON)
 
@@ -12,12 +17,71 @@ set(CMAKE_CXX_STANDARD 17)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
 
 find_package(Qt5 REQUIRED COMPONENTS Core)
-find_package(Qt5 REQUIRED COMPONENTS Core)
 
-add_executable(ip-filter
+add_executable(ip_filter
   main.cpp
 )
-target_link_libraries(ip-filter Qt${QT_VERSION_MAJOR}::Core)
+add_library(ip_filter_lib ip_filter_lib.cpp)
 
-install(TARGETS ip-filter
-    LIBRARY DESTINATION ${CMAKE_INSTALL_LIBDIR})
+set_target_properties(ip_filter PROPERTIES
+    CXX_STANDARD 14
+    CXX_STANDARD_REQUIRED ON
+)
+
+target_include_directories(ip_filter
+    PRIVATE "${CMAKE_BINARY_DIR}"
+)
+
+target_link_libraries(ip_filter PRIVATE Qt5::Core ip_filter_lib)
+target_link_libraries(ip_filter_lib PRIVATE Qt5::Core)
+
+if(WITH_GTEST)
+    find_package(GTest)
+
+    add_executable(ip_filter_tests ip_filter_tests.cpp)
+
+    set_target_properties(ip_filter_tests PROPERTIES
+        CXX_STANDARD 14
+        CXX_STANDARD_REQUIRED ON
+    )
+
+    target_link_libraries(ip_filter_tests
+        GTest::gtest_main
+        ip_filter_lib
+    )
+endif()
+
+if (MSVC)
+    target_compile_options(ip_filter PRIVATE
+        /W4
+    )
+    if(WITH_GTEST)
+        target_compile_options(ip_filter_tests PRIVATE
+            /W4
+    )
+    endif()
+else ()
+    target_compile_options(ip_filter PRIVATE
+        -Wall -Wextra -pedantic -Werror
+    )
+    if(WITH_GTEST)
+        target_compile_options(ip_filter_tests PRIVATE
+            -Wall -Wextra -pedantic -Werror
+    )
+    endif()
+endif()
+
+install(TARGETS ip_filter RUNTIME DESTINATION bin)
+
+set(CPACK_GENERATOR DEB)
+set(CPACK_PACKAGE_VERSION_MAJOR "${PROJECT_VERSION_MAJOR}")
+set(CPACK_PACKAGE_VERSION_MINOR "${PROJECT_VERSION_MINOR}")
+set(CPACK_PACKAGE_VERSION_PATCH "${PROJECT_VERSION_PATCH}")
+set(CPACK_PACKAGE_CONTACT example@example.com)
+include(CPack)
+
+if(WITH_GTEST)
+    enable_testing()
+    add_test(ip_filter_tests ip_filter_tests)
+endif()
+
