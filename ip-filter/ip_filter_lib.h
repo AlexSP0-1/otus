@@ -7,15 +7,20 @@
 #include <memory>
 #include <stdlib.h>
 #include <iostream>
+#include <arpa/inet.h>
 
-std::vector<std::string> split(const std::string &str, char d);
+struct ip_address {
+    union{
+        uint32_t ip;
+        uint8_t a,b,c,d;
+    };
+};
 
-void lexicalSort(std::vector<std::vector<std::string>> &ips);
 
-void printIpVector(std::vector<std::vector<std::string>> &ipVector);
 
-std::unique_ptr<std::vector<std::vector<std::string>>> getIpsByMask(
-    std::vector<std::vector<std::string>> ips, std::vector<int> &mask);
+std::string splitLine(const std::string &str, char d);
 
-std::unique_ptr<std::vector<std::vector<std::string>>> getIpsByAnyByte(
-    std::vector<std::vector<std::string>> ips, int byte);
+void printIpVector(std::vector<std::string> &ipVector);
+
+void printIpVector(std::vector<ip_address> &printIpVector);
+

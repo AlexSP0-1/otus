@@ -15,7 +15,7 @@ TEST(LexacalSortTest, testSort)
                                                           {"4", "1", "1", "4"},
                                                           {"1", "1", "1", "3"}};
 
-    lexicalSort(testingVector);
+    //lexicalSort(testingVector);
 
     EXPECT_EQ(testingVector, resultVector);
 }
