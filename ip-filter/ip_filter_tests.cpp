@@ -1,23 +1,45 @@
 #include "ip_filter_lib.h"
 #include "gtest/gtest.h"
 
-TEST(LexacalSortTest, testSort)
+TEST(sortTest, testSort)
 {
-    std::vector<std::vector<std::string>> testingVector = {{"4", "1", "1", "4"},
-                                                           {"5", "2", "1", "2"},
-                                                           {"5", "1", "1", "2"},
-                                                           {"5", "2", "2", "2"},
-                                                           {"1", "1", "1", "3"}};
+    std::string ip1_str = "1.1.1.2";
+    std::string ip2_str = "1.1.1.3";
+    std::string ip3_str = "1.2.1.3";
+    std::string ip4_str = "2.2.1.3";
 
-    std::vector<std::vector<std::string>> resultVector = {{"5", "2", "2", "2"},
-                                                          {"5", "2", "1", "2"},
-                                                          {"5", "1", "1", "2"},
-                                                          {"4", "1", "1", "4"},
-                                                          {"1", "1", "1", "3"}};
+    std::vector<ip_address> testVector;
 
-    //lexicalSort(testingVector);
+    ip_address currentIp;
+    currentIp.ip = inet_addr(ip1_str.c_str());
+    testVector.push_back(currentIp);
 
-    EXPECT_EQ(testingVector, resultVector);
+    currentIp.ip = inet_addr(ip2_str.c_str());
+    testVector.push_back(currentIp);
+
+    currentIp.ip = inet_addr(ip3_str.c_str());
+    testVector.push_back(currentIp);
+
+    currentIp.ip = inet_addr(ip4_str.c_str());
+    testVector.push_back(currentIp);
+
+    std::vector<ip_address> resultVector;
+
+    currentIp.ip = inet_addr(ip4_str.c_str());
+    resultVector.push_back(currentIp);
+
+    currentIp.ip = inet_addr(ip3_str.c_str());
+    resultVector.push_back(currentIp);
+
+    currentIp.ip = inet_addr(ip2_str.c_str());
+    resultVector.push_back(currentIp);
+
+    currentIp.ip = inet_addr(ip1_str.c_str());
+    resultVector.push_back(currentIp);
+
+    sortIp(testVector);
+
+    EXPECT_EQ(testVector, resultVector);
 }
 
 int main(int argc, char **argv)

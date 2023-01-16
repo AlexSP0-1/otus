@@ -12,8 +12,17 @@
 struct ip_address {
     union{
         uint32_t ip;
-        uint8_t a,b,c,d;
+        uint8_t octets[4];
     };
+
+    bool operator==(const ip_address ip2) const {
+        if(this->ip == ip2.ip) {
+            return true;
+        }
+        else {
+            return false;
+        }
+    }
 };
 
 
@@ -24,3 +33,9 @@ void printIpVector(std::vector<std::string> &ipVector);
 
 void printIpVector(std::vector<ip_address> &printIpVector);
 
+void sortIp(std::vector<ip_address> &ips);
+
+std::unique_ptr<std::vector<ip_address>> getIpByMask(std::vector<ip_address> &ips,
+                                                     std::vector<int> mask);
+
+std::unique_ptr<std::vector<ip_address>> getIpByByte(std::vector<ip_address> &ips, uint8_t byte);
