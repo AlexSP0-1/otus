@@ -29,7 +29,19 @@ int main(int, char const *[])
             ip_pool.push_back(currentIp);
         }
 
-        printIpVector(ip_pool);
+        sortIp(ip_pool);
+
+        auto printByMask = [](std::vector<ip_address> ips, std::vector<int> mask) {
+            auto byMaskResult = getIpByMask(ips, mask);
+            printIpVector(*byMaskResult.get());
+        };
+
+        printByMask(ip_pool, {1, -1, -1, -1});
+
+        printByMask(ip_pool, {46, 70, -1, -1});
+
+        auto resultByByte = getIpByByte(ip_pool, 46);
+        printIpVector(*resultByByte.get());
     }
     catch (const std::exception &e)
     {
