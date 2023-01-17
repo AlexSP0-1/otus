@@ -8,6 +8,7 @@ project(ip_filter VERSION ${PROJECT_VERSION})
 option(WITH_GTEST "Whether to build google test" ON)
 
 configure_file(version.h.in version.h)
+include(cmake/GoogleBenchmark.cmake)
 
 set(CMAKE_INCLUDE_CURRENT_DIR ON)
 
@@ -21,6 +22,8 @@ set(CMAKE_CXX_STANDARD_REQUIRED ON)
 add_executable(ip_filter
   main.cpp
 )
+
+add_executable(ip_filter_bench main_bench.cpp)
 add_library(ip_filter_lib ip_filter_lib.cpp)
 
 set_target_properties(ip_filter PROPERTIES
@@ -33,7 +36,7 @@ target_include_directories(ip_filter
 )
 
 target_link_libraries(ip_filter PRIVATE ip_filter_lib)
-#target_link_libraries(ip_filter_lib PRIVATE Qt5::Core)
+target_link_libraries(ip_filter_bench PRIVATE ip_filter_lib benchmark::benchmark)
 
 if(WITH_GTEST)
     find_package(GTest)

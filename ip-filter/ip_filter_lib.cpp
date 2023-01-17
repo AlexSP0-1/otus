@@ -1,6 +1,7 @@
 #include "ip_filter_lib.h"
 
 #include <arpa/inet.h>
+#include <time.h>
 
 std::string splitLine(const std::string &str, char d)
 {
@@ -36,6 +37,17 @@ void sortIp(std::vector<ip_address> &ips)
         }
         return false;
     });
+}
+
+void generateIpVector(std::vector<ip_address> &ips, int size)
+{
+    ips.clear();
+    ips.reserve(size);
+
+    //    srand(time(NULL));
+    //    for(size_t i = 0; i < size; i++) {
+    //        int byte = 0 + rand()%(255+1)
+    //    }
 }
 
 std::unique_ptr<std::vector<ip_address>> getIpByMask(std::vector<ip_address> &ips,
