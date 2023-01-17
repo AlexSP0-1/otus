@@ -17,9 +17,7 @@ int main(int, char const *[])
     {
         std::vector<ip_address> ip_pool;
 
-        std::ifstream file("ip_filter.tsv");
-
-        for (std::string line; std::getline(file, line);)
+        for (std::string line; std::getline(std::cin, line);)
         {
             std::string v = splitLine(line, '\t');
 
