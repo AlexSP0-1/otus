@@ -9,13 +9,6 @@ std::string splitLine(const std::string &str, char d)
     return str.substr(0, stop);
 }
 
-void printIpVector(std::vector<std::string> &ipVector)
-{
-    std::for_each(ipVector.begin(), ipVector.end(), [&](std::string &currentIp) {
-        std::cout << currentIp << std::endl;
-    });
-}
-
 void printIpVector(std::vector<ip_address> &ipVector)
 {
     std::for_each(ipVector.begin(), ipVector.end(), [&](ip_address &currentIp) {
@@ -82,6 +75,7 @@ std::unique_ptr<std::vector<ip_address>> getIpByByte(std::vector<ip_address> &ip
             if (byte == currentIp.octets[i])
             {
                 resultVector.emplace_back(currentIp);
+                return;
             }
         }
     });
