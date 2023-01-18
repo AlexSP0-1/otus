@@ -9,10 +9,12 @@
 #include <iostream>
 #include <arpa/inet.h>
 
+inline static int MAX_OCTETS = 4;
+
 struct ip_address {
     union{
         uint32_t ip;
-        uint8_t octets[4];
+        uint8_t octets[MAX_OCTETS];
     };
 
     bool operator==(const ip_address ip2) const {

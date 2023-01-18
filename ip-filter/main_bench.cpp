@@ -15,7 +15,7 @@ void generateRandomIpVector(std::vector<ip_address> &ips, int size)
     for (size_t i = 0; i < size; i++)
     {
         ip_address currentIp;
-        for (size_t j = 0; j < 4; j++)
+        for (size_t j = 0; j < MAX_OCTETS; j++)
         {
             currentIp.octets[j] = dist255(rng);
         }

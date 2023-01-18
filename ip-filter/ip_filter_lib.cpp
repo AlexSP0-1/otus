@@ -24,7 +24,7 @@ void printIpVector(std::vector<ip_address> &ipVector)
 void sortIp(std::vector<ip_address> &ips)
 {
     std::sort(ips.begin(), ips.end(), [](ip_address &ip1, ip_address &ip2) {
-        for (size_t i = 0; i < sizeof(ip1.octets) / sizeof(ip1.octets[0]); i++)
+        for (size_t i = 0; i < MAX_OCTETS; i++)
         {
             if (ip1.octets[i] > ip2.octets[i])
             {
@@ -48,7 +48,7 @@ std::unique_ptr<std::vector<ip_address>> getIpByMask(std::vector<ip_address> &ip
     {
         bool matchFLag = true;
 
-        for (size_t i = 0; i < mask.size(); i++)
+        for (size_t i = 0; i < MAX_OCTETS; i++)
         {
             if (mask[i] != -1 && mask[i] != it->octets[i])
             {
@@ -70,7 +70,7 @@ std::unique_ptr<std::vector<ip_address>> getIpByByte(std::vector<ip_address> &ip
     std::vector<ip_address> resultVector;
 
     std::for_each(ips.begin(), ips.end(), [&](ip_address currentIp) {
-        for (size_t i = 0; i < sizeof(currentIp.octets) / sizeof(currentIp.octets[0]); i++)
+        for (size_t i = 0; i < MAX_OCTETS; i++)
         {
             if (byte == currentIp.octets[i])
             {
