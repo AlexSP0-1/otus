@@ -53,25 +53,24 @@ void generateIpVector(std::vector<ip_address> &ips, int size)
 std::unique_ptr<std::vector<ip_address>> getIpByMask(std::vector<ip_address> &ips,
                                                      std::vector<int> mask)
 {
-    std::vector<ip_address> resultVector(ips);
+    std::vector<ip_address> resultVector;
 
-    for (size_t maskPosition = 0; maskPosition < mask.size(); maskPosition++)
+    for (std::vector<ip_address>::iterator it = ips.begin(); it != ips.end();)
     {
-        if (mask[maskPosition] != -1)
+        bool matchFLag = true;
+
+        for (size_t i = 0; i < mask.size(); i++)
         {
-            for (std::vector<ip_address>::iterator it = resultVector.begin();
-                 it != resultVector.end();)
+            if (mask[i] != -1 && mask[i] != it->octets[i])
             {
-                if (mask[maskPosition] != it->octets[maskPosition])
-                {
-                    resultVector.erase(it);
-                }
-                else
-                {
-                    it++;
-                }
+                matchFLag = false;
             }
         }
+        if (matchFLag)
+        {
+            resultVector.emplace_back(*it);
+        }
+        ++it;
     }
 
     return std::move(std::make_unique<std::vector<ip_address>>(resultVector));
