@@ -26,11 +26,6 @@ add_executable(ip_filter
 add_executable(ip_filter_bench main_bench.cpp)
 add_library(ip_filter_lib ip_filter_lib.cpp)
 
-set_target_properties(ip_filter PROPERTIES
-    CXX_STANDARD 14
-    CXX_STANDARD_REQUIRED ON
-)
-
 target_include_directories(ip_filter
     PRIVATE "${CMAKE_BINARY_DIR}"
 )
@@ -42,11 +37,6 @@ if(WITH_GTEST)
     find_package(GTest)
 
     add_executable(ip_filter_tests ip_filter_tests.cpp)
-
-    set_target_properties(ip_filter_tests PROPERTIES
-        CXX_STANDARD 14
-        CXX_STANDARD_REQUIRED ON
-    )
 
     target_link_libraries(ip_filter_tests
         GTest::gtest_main

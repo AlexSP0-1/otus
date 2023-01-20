@@ -9,7 +9,7 @@
 #include <iostream>
 #include <arpa/inet.h>
 
-inline static int MAX_OCTETS = 4;
+inline static const int MAX_OCTETS = 4;
 
 struct ip_address {
     union{
