@@ -13,6 +13,16 @@
 
 int main(int, char const *[])
 {
+    std::string f("1.2.1.1");
+    std::string d("2.1.1.1");
+    ip_address currentIp1;
+    ip_address currentIp2;
+    currentIp1.ip = inet_addr(f.c_str());
+    currentIp2.ip = inet_addr(d.c_str());
+
+    currentIp1.ip = currentIp2.ip;
+    currentIp2.ip = currentIp1.ip;
+
     try
     {
         std::vector<ip_address> ip_pool;
@@ -20,6 +30,12 @@ int main(int, char const *[])
         for (std::string line; std::getline(std::cin, line);)
         {
             std::string v = splitLine(line, '\t');
+
+            if (!validateIpAddress(v))
+            {
+                std::cout << "String:" << v << " is not a valid IP address!" << std::endl;
+                continue;
+            }
 
             ip_address currentIp;
             currentIp.ip = inet_addr(v.c_str());
@@ -32,7 +48,7 @@ int main(int, char const *[])
 
         auto printByMask = [](std::vector<ip_address> ips, std::vector<int> mask) {
             auto byMaskResult = getIpByMask(ips, mask);
-            printIpVector(*byMaskResult.get());
+            printIpVector(byMaskResult);
         };
 
         printByMask(ip_pool, {1, -1, -1, -1});
@@ -40,7 +56,7 @@ int main(int, char const *[])
         printByMask(ip_pool, {46, 70, -1, -1});
 
         auto resultByByte = getIpByByte(ip_pool, 46);
-        printIpVector(*resultByByte.get());
+        printIpVector(resultByByte);
     }
     catch (const std::exception &e)
     {

@@ -31,13 +31,14 @@ struct ip_address {
 
 std::string splitLine(const std::string &str, char d);
 
+bool validateIpAddress(std::string ip);
+
 void printIpVector(std::vector<std::string> &ipVector);
 
 void printIpVector(std::vector<ip_address> &printIpVector);
 
 void sortIp(std::vector<ip_address> &ips);
 
-std::unique_ptr<std::vector<ip_address>> getIpByMask(std::vector<ip_address> &ips,
+std::vector<ip_address> getIpByMask (std::vector<ip_address> &ips,
                                                      std::vector<int> mask);
-
-std::unique_ptr<std::vector<ip_address>> getIpByByte(std::vector<ip_address> &ips, uint8_t byte);
+std::vector<ip_address> getIpByByte(std::vector<ip_address> &ips, uint8_t byte);

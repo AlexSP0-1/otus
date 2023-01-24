@@ -49,7 +49,7 @@ TEST(getByMask, filterTest)
 
     auto resultByMask = getIpByMask(testVector, {-1, 46, 46, -1});
 
-    EXPECT_EQ(*resultByMask.get(), resultVector);
+    EXPECT_EQ(resultByMask, resultVector);
 }
 
 TEST(getByByte, filterTest)
@@ -72,7 +72,7 @@ TEST(getByByte, filterTest)
 
     auto resultByByte = getIpByByte(testVector, 46);
 
-    EXPECT_EQ(*resultByByte.get(), resultVector);
+    EXPECT_EQ(resultByByte, resultVector);
 }
 
 int main(int argc, char **argv)
