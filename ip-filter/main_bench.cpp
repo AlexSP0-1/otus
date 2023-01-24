@@ -29,8 +29,10 @@ static void BM_getByMask(benchmark::State &state)
 
     generateRandomIpVector(ips, 100);
 
+    const std::vector<int>mask = {128, -1, -1, -1};
+
     for (auto _ : state)
-        auto result = getIpByMask(ips, {128, -1, -1, -1});
+        auto result = getIpByMask(ips, mask);
 }
 BENCHMARK(BM_getByMask);
 

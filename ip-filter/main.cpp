@@ -21,8 +21,15 @@ int main(int, char const *[])
         {
             std::string v = splitLine(line, '\t');
 
+
             ip_address currentIp;
-            currentIp.ip = inet_addr(v.c_str());
+            in_addr ip;
+
+            if(inet_aton(v.c_str(), &ip) ==0) {
+                std::cout << "String:" << v << " is not a valid IP address!" << std::endl;
+                continue;
+            }
+            currentIp.ip = ip.s_addr;
 
             ip_pool.push_back(currentIp);
         }
@@ -32,7 +39,7 @@ int main(int, char const *[])
 
         auto printByMask = [](std::vector<ip_address> ips, std::vector<int> mask) {
             auto byMaskResult = getIpByMask(ips, mask);
-            printIpVector(*byMaskResult.get());
+            printIpVector(byMaskResult);
         };
 
         printByMask(ip_pool, {1, -1, -1, -1});
@@ -40,7 +47,7 @@ int main(int, char const *[])
         printByMask(ip_pool, {46, 70, -1, -1});
 
         auto resultByByte = getIpByByte(ip_pool, 46);
-        printIpVector(*resultByByte.get());
+        printIpVector(resultByByte);
     }
     catch (const std::exception &e)
     {

@@ -1,6 +1,7 @@
 #include "ip_filter_lib.h"
 
 #include <arpa/inet.h>
+#include <regex>
 #include <time.h>
 
 std::string splitLine(const std::string &str, char d)
@@ -12,7 +13,7 @@ std::string splitLine(const std::string &str, char d)
 
 void printIpVector(std::vector<ip_address> &ipVector)
 {
-    std::for_each(ipVector.begin(), ipVector.end(), [&](ip_address &currentIp) {
+    std::for_each(ipVector.begin(), ipVector.end(), [&](const auto &currentIp) {
         struct in_addr my_addr;
 
         my_addr.s_addr = currentIp.ip;
@@ -39,8 +40,7 @@ void sortIp(std::vector<ip_address> &ips)
     });
 }
 
-std::unique_ptr<std::vector<ip_address>> getIpByMask(std::vector<ip_address> &ips,
-                                                     std::vector<int> mask)
+std::vector<ip_address> getIpByMask(std::vector<ip_address> &ips, const std::vector<int> &mask)
 {
     std::vector<ip_address> resultVector;
 
@@ -53,6 +53,7 @@ std::unique_ptr<std::vector<ip_address>> getIpByMask(std::vector<ip_address> &ip
             if (mask[i] != -1 && mask[i] != it->octets[i])
             {
                 matchFLag = false;
+                break;
             }
         }
         if (matchFLag)
@@ -62,14 +63,14 @@ std::unique_ptr<std::vector<ip_address>> getIpByMask(std::vector<ip_address> &ip
         ++it;
     }
 
-    return std::move(std::make_unique<std::vector<ip_address>>(resultVector));
+    return resultVector;
 }
 
-std::unique_ptr<std::vector<ip_address>> getIpByByte(std::vector<ip_address> &ips, uint8_t byte)
+std::vector<ip_address> getIpByByte(std::vector<ip_address> &ips, uint8_t byte)
 {
     std::vector<ip_address> resultVector;
 
-    std::for_each(ips.begin(), ips.end(), [&](ip_address currentIp) {
+    std::for_each(ips.begin(), ips.end(), [&](const auto &currentIp) {
         for (size_t i = 0; i < MAX_OCTETS; i++)
         {
             if (byte == currentIp.octets[i])
@@ -80,5 +81,5 @@ std::unique_ptr<std::vector<ip_address>> getIpByByte(std::vector<ip_address> &ip
         }
     });
 
-    return std::move(std::make_unique<std::vector<ip_address>>(resultVector));
+    return resultVector;
 }
