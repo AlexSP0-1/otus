@@ -12,13 +12,12 @@ jobs:
       run:
         working-directory: ./custom-allocator
     steps:
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v3
         with:
           submodules: true
       - run: sudo apt-get update && sudo apt-get install libgtest-dev -y
       - run: cmake . -DPATCH_VERSION=${{ github.run_number }} -DWITH_GTEST=ON
       - run: cmake --build .
-      - run: cmake --build . --target test
       - run: cmake --build . --target package
       - name: Create Release
         id: create_release
@@ -26,8 +25,8 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
-          tag_name: ${{ github.run_number }}
-          release_name: Release ${{ github.run_number }}
+          tag_name: ${{ github.run_number }}-a 
+          release_name: Release ${{ github.run_number }}-a
           draft: false
           prerelease: false
       - name: Upload Release Asset
