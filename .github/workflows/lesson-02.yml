@@ -1,16 +1,16 @@
-name: 'C++ CI'
+name: 'lambdas_tuples_auto'
 
 on:
   push:
     paths:
-      - 'helloworld-cli/**'
+      - 'ip-filter/**'
 
 jobs:
   build:
     runs-on: ubuntu-latest
     defaults:
       run:
-        working-directory: ./helloworld-cli
+        working-directory: ./ip-filter
     steps:
       - uses: actions/checkout@v2
         with:
@@ -37,6 +37,7 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
           upload_url: ${{ steps.create_release.outputs.upload_url }}
-          asset_path: /home/runner/work/otus/otus/helloworld-cli/helloworld-0.0.${{ github.run_number }}-Linux.deb
-          asset_name: helloworld-0.0.${{ github.run_number }}-Linux.deb
+          asset_path: /home/runner/work/otus/otus/ip-filter/ip_filter-0.0.${{ github.run_number }}-Linux.deb
+          asset_name: ip_filter-0.0.${{ github.run_number }}-Linux.deb
           asset_content_type: application/vnd.debian.binary-package
+          allow_Updates: true
