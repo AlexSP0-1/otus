@@ -19,10 +19,6 @@ add_executable(custom-allocator
   main.cpp
 )
 
-target_link_libraries(custom-allocator PRIVATE c_alloc_lib)
-
-add_library(c_alloc_lib c_alloc_lib.cpp)
-
 target_include_directories(custom-allocator
     PRIVATE "${CMAKE_BINARY_DIR}"
 )
