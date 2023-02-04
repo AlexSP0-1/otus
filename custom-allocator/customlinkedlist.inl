@@ -53,7 +53,7 @@ void CustomLinkedList<T,Allocator>::add(const T &newData) {
 
     Node<T> *newNode = NodeAllocator.allocate(1u);
 
-    NodeAllocator.costruct(newNode->data, newData);
+    NodeAllocator.construct(&newNode->data, newData);
 
     newNode->next = nullptr;
 
@@ -100,7 +100,7 @@ void CustomLinkedList<T,Allocator>::clear() {
 
         current = current->next;
 
-        NodeAllocator.destroy(temp->data);
+        NodeAllocator.destroy(&temp->data);
 
         NodeAllocator.deallocate(temp, 1u);
     }

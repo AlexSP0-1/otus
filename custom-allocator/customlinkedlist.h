@@ -12,6 +12,8 @@ struct Node {
 template<typename T>
 class CustomLinkedListIterator : public std::iterator<std::forward_iterator_tag, T> {
 
+public:
+
     CustomLinkedListIterator() = default;
 
     CustomLinkedListIterator(Node<T> *ptr) : pCurrent(ptr) {}
@@ -27,7 +29,7 @@ class CustomLinkedListIterator : public std::iterator<std::forward_iterator_tag,
     CustomLinkedListIterator<T> &operator++() {
         pCurrent = pCurrent->next;
 
-        return this;
+        return *this;
     }
 
     CustomLinkedListIterator<T> operator++(int) {
@@ -48,8 +50,11 @@ class CustomLinkedListIterator : public std::iterator<std::forward_iterator_tag,
         return pCurrent->data;
     }
 
+    template<typename U, typename Allocator>
+    friend class CustomLinkedList;
+
     private:
-        Node<T> pCurrent = nullptr;
+        Node<T> *pCurrent = nullptr;
 };
 
 template<typename T, typename Allocator>
