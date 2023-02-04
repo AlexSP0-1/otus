@@ -1,4 +1,5 @@
 #include "customallocator.h"
+#include "customlinkedlist.h"
 #include "simplestrategy.h"
 
 static const int SZ = 15; //chunk size
