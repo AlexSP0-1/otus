@@ -1,3 +1,6 @@
+#ifndef SIMPLESTRATEGY_H
+#define SIMPLESTRATEGY_H
+
 template<class T, std::size_t SZ>
 class simple_strategy
 {
@@ -65,3 +68,6 @@ inline T *simple_strategy<T, SZ>::allocate(std::size_t n)
 template<typename T, std::size_t SZ>
 inline void simple_strategy<T, SZ>::deallocate(T *, std::size_t)
 {}
+
+
+#endif //SIMPLESTRATEGY_H
