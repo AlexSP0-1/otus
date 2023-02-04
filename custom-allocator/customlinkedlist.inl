@@ -118,3 +118,27 @@ Node<T>* CustomLinkedList<T,Allocator>::getHead() {
     return head;
 }
 
+
+
+template<typename T, typename Allocator>
+typename CustomLinkedList<T, Allocator>::iterator CustomLinkedList<T, Allocator>::before_begin() {
+    beforeHead.next = head;
+
+    return iterator(&beforeHead);
+}
+
+template<typename T, typename Allocator>
+typename CustomLinkedList<T, Allocator>::iterator CustomLinkedList<T, Allocator>::erase_after(iterator it) {
+
+    if(it != end()) {
+        Node<T> *temp = it.ptrToNode()->next;
+
+        if(temp) {
+            it.ptrToNode()->next = temp->next;
+            NodeAllocator.destroy(&temp->data);
+            NodeAllocator.destroy(temp, 1u);
+        }
+
+    }
+}
+
