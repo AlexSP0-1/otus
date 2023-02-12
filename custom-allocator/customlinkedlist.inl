@@ -1,10 +1,12 @@
 #include <customlinkedlist.h>
 
 template<typename T, typename Allocator>
-CustomLinkedList<T,Allocator>::CustomLinkedList(const CustomLinkedList<T, Allocator> &other) {
+CustomLinkedList<T,Allocator>::CustomLinkedList(const CustomLinkedList<T, Allocator> &other)
+{
     Node<T> pCurrent = other.head;
 
-    while(pCurrent) {
+    while(pCurrent)
+    {
         add(pCurrent->data);
         pCurrent = pCurrent->next;
     }
@@ -12,17 +14,20 @@ CustomLinkedList<T,Allocator>::CustomLinkedList(const CustomLinkedList<T, Alloca
 
 template<typename T, typename Allocator>
 CustomLinkedList<T,Allocator>::CustomLinkedList(const CustomLinkedList &&other)
-    :head(other.head) {
+    :head(other.head)
+{
 
     other.head = nullptr;
 }
 
 template<typename T, typename Allocator>
 template<typename Alloc>
-CustomLinkedList<T,Allocator>::CustomLinkedList(const CustomLinkedList<T, Alloc> &other) {
+CustomLinkedList<T,Allocator>::CustomLinkedList(const CustomLinkedList<T, Alloc> &other)
+{
     Node<T> pCurrent = other.getHead();
 
-    while(pCurrent) {
+    while(pCurrent)
+    {
         add(pCurrent->data);
         pCurrent = pCurrent->next;
     }
@@ -30,10 +35,12 @@ CustomLinkedList<T,Allocator>::CustomLinkedList(const CustomLinkedList<T, Alloc>
 
 template<typename T, typename Allocator>
 template<typename Alloc>
-CustomLinkedList<T,Allocator>::CustomLinkedList(const CustomLinkedList<T, Alloc> &&other) {
+CustomLinkedList<T,Allocator>::CustomLinkedList(const CustomLinkedList<T, Alloc> &&other)
+{
     Node<T> pCurrent = other.getHead();
 
-    while(pCurrent) {
+    while(pCurrent)
+    {
         add(std::move(pCurrent->data));
         pCurrent = pCurrent->next;
     }
@@ -42,12 +49,14 @@ CustomLinkedList<T,Allocator>::CustomLinkedList(const CustomLinkedList<T, Alloc>
 }
 
 template<typename T, typename Allocator>
-CustomLinkedList<T,Allocator>::~CustomLinkedList() {
+CustomLinkedList<T,Allocator>::~CustomLinkedList()
+{
     clear();
 }
 
 template<typename T, typename Allocator>
-void CustomLinkedList<T,Allocator>::add(const T &newData) {
+void CustomLinkedList<T,Allocator>::add(const T &newData)
+{
 
     Node<T> *temp;
 
@@ -57,15 +66,16 @@ void CustomLinkedList<T,Allocator>::add(const T &newData) {
 
     newNode->next = nullptr;
 
-    if(!head) {
-
+    if(!head)
+    {
         head = current = newNode;
     }
     else
     {
         current = head;
 
-        while(current) {
+        while(current)
+        {
 
             temp = current;
 
@@ -79,23 +89,27 @@ void CustomLinkedList<T,Allocator>::add(const T &newData) {
 
 template<typename T, typename Allocator>
 template<typename ...Args>
-void CustomLinkedList<T,Allocator>::emplace(Args&& ...args) {
+void CustomLinkedList<T,Allocator>::emplace(Args&& ...args)
+{
 
 }
 
 template<typename T, typename Allocator>
-bool CustomLinkedList<T,Allocator>::isEmpty() {
+bool CustomLinkedList<T,Allocator>::isEmpty()
+{
     return !head;
 }
 
 template<typename T, typename Allocator>
-void CustomLinkedList<T,Allocator>::clear() {
+void CustomLinkedList<T,Allocator>::clear()
+{
 
     Node<T> *temp;
 
     current = head;
 
-    while(current) {
+    while(current)
+    {
         temp = current;
 
         current = current->next;
@@ -109,31 +123,35 @@ void CustomLinkedList<T,Allocator>::clear() {
 }
 
 template<typename T, typename Allocator>
-Node<T>* CustomLinkedList<T,Allocator>::getNext() {
+Node<T>* CustomLinkedList<T,Allocator>::getNext()
+{
     return current->next;
 }
 
 template<typename T, typename Allocator>
-Node<T>* CustomLinkedList<T,Allocator>::getHead() {
+Node<T>* CustomLinkedList<T,Allocator>::getHead()
+{
     return head;
 }
 
-
-
 template<typename T, typename Allocator>
-typename CustomLinkedList<T, Allocator>::iterator CustomLinkedList<T, Allocator>::before_begin() {
+typename CustomLinkedList<T, Allocator>::iterator CustomLinkedList<T, Allocator>::before_begin()
+{
     beforeHead.next = head;
 
     return iterator(&beforeHead);
 }
 
 template<typename T, typename Allocator>
-typename CustomLinkedList<T, Allocator>::iterator CustomLinkedList<T, Allocator>::erase_after(iterator it) {
+typename CustomLinkedList<T, Allocator>::iterator CustomLinkedList<T, Allocator>::erase_after(iterator it)
+{
 
-    if(it != end()) {
+    if(it != end())
+    {
         Node<T> *temp = it.ptrToNode()->next;
 
-        if(temp) {
+        if(temp)
+        {
             it.ptrToNode()->next = temp->next;
             NodeAllocator.destroy(&temp->data);
             NodeAllocator.destroy(temp, 1u);

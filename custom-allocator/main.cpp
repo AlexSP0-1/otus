@@ -4,7 +4,7 @@
 
 #include <map>
 
-static const int SZ = 10;
+static const int SIZE = 10;
 
 int MyFactorial(int n)
 {
@@ -27,13 +27,13 @@ void printMap(std::map<int, int> &m)
 }
 
 template<typename T>
-using allocatorSimple = Custom_allocator<T, SZ, simple_strategy>;
+using allocatorSimple = CustomAllocator<T, SIZE, SimpleStrategy>;
 
 int main(int, char **)
 {
     //std::map with std::allocator
     std::map<int, int> mFactorial;
-    for (int i = 0; i < SZ; i++)
+    for (int i = 0; i < SIZE; i++)
     {
         mFactorial.try_emplace(i, MyFactorial(i));
     }
@@ -41,9 +41,9 @@ int main(int, char **)
     printMap(mFactorial);
 
     //using custom allocator
-    std::map<int, int, std::less<int>, Custom_allocator<int, SZ, simple_strategy>> mCustomFactorial;
+    std::map<int, int, std::less<int>, allocatorSimple<int>> mCustomFactorial;
 
-    for (int i = 0; i < SZ; i++)
+    for (int i = 0; i < SIZE; i++)
     {
         mCustomFactorial.try_emplace(i, MyFactorial(i));
     }
@@ -53,26 +53,26 @@ int main(int, char **)
     //using custom linked list with standart allocator
     CustomLinkedList<int, std::allocator<int>> customList;
 
-    for (int i = 0; i < SZ; i++)
+    for (int i = 0; i < SIZE; i++)
     {
         customList.add(i);
     }
 
-    for (auto it = customList.begin(); it != customList.end(); ++it)
+    for (auto listElement : customList)
     {
-        std::cout << *it << std::endl;
+        std::cout << listElement << std::endl;
     }
 
     //using custom linked list with custom allocator
     CustomLinkedList<int, allocatorSimple<int>> customListWithCustomAlloc;
 
-    for (int i = 0; i < SZ; i++)
+    for (int i = 0; i < SIZE; i++)
     {
         customListWithCustomAlloc.add(i);
     }
 
-    for (auto it = customListWithCustomAlloc.begin(); it != customListWithCustomAlloc.end(); ++it)
+    for (auto listElement : customListWithCustomAlloc)
     {
-        std::cout << *it << std::endl;
+        std::cout << listElement << std::endl;
     }
 }

@@ -1,15 +1,16 @@
 #ifndef SIMPLESTRATEGY_H
 #define SIMPLESTRATEGY_H
 
-template<class T, std::size_t SZ>
-class simple_strategy
+template<class T, std::size_t SIZE>
+class SimpleStrategy
 {
+
 public:
-    simple_strategy() noexcept;
+    SimpleStrategy() noexcept;
 
-    simple_strategy(const simple_strategy &) = delete;
+    SimpleStrategy(const SimpleStrategy &) = delete;
 
-    ~simple_strategy();
+    ~SimpleStrategy();
 
     T *allocate(std::size_t);
 
@@ -21,20 +22,20 @@ private:
     std::size_t usedInChunk;
 };
 
-template<typename T, std::size_t SZ>
-inline simple_strategy<T, SZ>::simple_strategy() noexcept
+template<typename T, std::size_t SIZE>
+inline SimpleStrategy<T, SIZE>::SimpleStrategy() noexcept
     : memoryChunk(nullptr)
     , usedInChunk(0)
 {}
 
-template<typename T, std::size_t SZ>
-inline simple_strategy<T, SZ>::~simple_strategy()
+template<typename T, std::size_t SIZE>
+inline SimpleStrategy<T, SIZE>::~SimpleStrategy()
 {
     ::operator delete(memoryChunk);
 }
 
-template<typename T, std::size_t SZ>
-inline T *simple_strategy<T, SZ>::allocate(std::size_t n)
+template<typename T, std::size_t SIZE>
+inline T *SimpleStrategy<T, SIZE>::allocate(std::size_t n)
 {
     if (n == 0)
     {
@@ -43,7 +44,7 @@ inline T *simple_strategy<T, SZ>::allocate(std::size_t n)
 
     if (!memoryChunk)
     {
-        memoryChunk = static_cast<T *>(::operator new(SZ * sizeof(T)));
+        memoryChunk = static_cast<T *>(::operator new(SIZE * sizeof(T)));
 
         if (!memoryChunk)
         {
@@ -55,7 +56,7 @@ inline T *simple_strategy<T, SZ>::allocate(std::size_t n)
 
     usedInChunk += n;
 
-    if (usedInChunk > SZ)
+    if (usedInChunk > SIZE)
     {
         throw std::bad_alloc();
     }
@@ -65,8 +66,8 @@ inline T *simple_strategy<T, SZ>::allocate(std::size_t n)
     }
 }
 
-template<typename T, std::size_t SZ>
-inline void simple_strategy<T, SZ>::deallocate(T *, std::size_t)
+template<typename T, std::size_t SIZE>
+inline void SimpleStrategy<T, SIZE>::deallocate(T *, std::size_t)
 {}
 
 

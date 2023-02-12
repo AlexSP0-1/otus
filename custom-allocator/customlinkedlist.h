@@ -2,15 +2,18 @@
 #define CUSTOMLINKEDLIST_H
 
 template<typename T>
-struct Node {
-
+struct Node
+{
     Node<T> *next;
 
     T data;
+
+    Node() : next(nullptr) {}
 };
 
 template<typename T>
-class CustomLinkedListIterator : public std::iterator<std::forward_iterator_tag, T> {
+class CustomLinkedListIterator : public std::iterator<std::forward_iterator_tag, T>
+{
 
 public:
 
@@ -18,21 +21,25 @@ public:
 
     CustomLinkedListIterator(Node<T> *ptr) : pCurrent(ptr) {}
 
-    bool operator!=(const CustomLinkedListIterator &other) const {
+    bool operator!=(const CustomLinkedListIterator &other) const
+    {
         return pCurrent != other.pCurrent;
     }
 
-    bool operator==(const CustomLinkedListIterator &other) const {
+    bool operator==(const CustomLinkedListIterator &other) const \
+    {
         return pCurrent == other.pCurrent;
     }
 
-    CustomLinkedListIterator<T> &operator++() {
+    CustomLinkedListIterator<T> &operator++()
+    {
         pCurrent = pCurrent->next;
 
         return *this;
     }
 
-    CustomLinkedListIterator<T> operator++(int) {
+    CustomLinkedListIterator<T> operator++(int)
+    {
         CustomLinkedListIterator<T> temp = *this;
 
         pCurrent = pCurrent->next;
@@ -42,11 +49,13 @@ public:
 
     Node<T> *ptrToNode() const {return pCurrent;}
 
-    typename CustomLinkedListIterator::reference operator*() const {
+    typename CustomLinkedListIterator::reference operator*() const
+    {
         return pCurrent->data;
     }
 
-    typename CustomLinkedListIterator::pointer operator->() const {
+    typename CustomLinkedListIterator::pointer operator->() const
+    {
         return pCurrent->data;
     }
 
@@ -58,7 +67,8 @@ public:
 };
 
 template<typename T, typename Allocator>
-class CustomLinkedList {
+class CustomLinkedList
+{
 
 private:
     Node<T> *head = nullptr;

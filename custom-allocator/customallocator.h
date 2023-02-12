@@ -4,26 +4,27 @@
 #include <iostream>
 
 template<typename T, std::size_t BLOCKS, template<typename, std::size_t> class Strategy>
-class Custom_allocator : protected Strategy<T, BLOCKS>
+class CustomAllocator : protected Strategy<T, BLOCKS>
 {
+
 public:
     using value_type = T;
 
     template<typename U>
     struct rebind
     {
-        using other = Custom_allocator<U, BLOCKS, Strategy>;
+        using other = CustomAllocator<U, BLOCKS, Strategy>;
     };
 
-    Custom_allocator() = default;
+    CustomAllocator() = default;
 
-    ~Custom_allocator() = default;
+    ~CustomAllocator() = default;
 
-    Custom_allocator(const Custom_allocator &) = delete;
+    CustomAllocator(const CustomAllocator &) = delete;
 
     T *allocate(size_t n) { return Strategy<T, BLOCKS>::allocate(n); }
 
-    void deallocate(T *p, std::size_t n) { Strategy<T, BLOCKS>::deallocate(p, n); }
+    void deallocate(T *p, std::size_t n) { Strategy<T, BLOCKS>::deallocate(p, n);    }
 
     template<typename U, typename... Args>
     void construct(U *p, Args &&...args) const
@@ -39,15 +40,15 @@ public:
 };
 
 template<typename T, std::size_t BLOCKS, template<typename, std::size_t> class Strategy>
-inline bool operator==(const Custom_allocator<T, BLOCKS, Strategy> &,
-                       const Custom_allocator<T, BLOCKS, Strategy> &)
+inline bool operator==(const CustomAllocator<T, BLOCKS, Strategy> &,
+                       const CustomAllocator<T, BLOCKS, Strategy> &)
 {
     return true;
 }
 
 template<typename T, std::size_t BLOCKS, template<typename, std::size_t> class Strategy>
-inline bool operator!=(const Custom_allocator<T, BLOCKS, Strategy> &,
-                       const Custom_allocator<T, BLOCKS, Strategy> &)
+inline bool operator!=(const CustomAllocator<T, BLOCKS, Strategy> &,
+                       const CustomAllocator<T, BLOCKS, Strategy> &)
 {
     return false;
 }
