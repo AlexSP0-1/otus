@@ -1,5 +1,5 @@
 #ifndef IPPRINTERS_H
-#define INTEGRALTYPEPRINTER_H
+#define IPPRINTERS_H
 
 #include "ipfunctions.h"
 #include <iostream>
