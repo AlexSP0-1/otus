@@ -79,6 +79,8 @@ std::ostream &operator<<(std::ostream &stream, const std::tuple<Ts...> &param) {
 
     std::apply(printToStream, param);
 
+    stream << std::endl;
+
     return stream;
 }
 
