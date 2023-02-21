@@ -19,6 +19,9 @@ using EnableIfContainerType = std::enable_if_t<std::is_same_v<Container<T>, std:
 template<typename T>
 using EnableIfStringType = std::enable_if_t<std::is_same_v<std::decay_t<T>, std::string>>;
 
+template<typename T, typename ...Args>
+using EnableIfAllTheSame = std::enable_if_t<std::conjunction_v<std::is_same<T, Args>...>>;
+
 }
 
 #endif //IPFUNCTIONS_H

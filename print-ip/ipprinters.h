@@ -4,6 +4,7 @@
 #include "ipfunctions.h"
 #include <iostream>
 #include <experimental/iterator>
+#include <tuple>
 
 template<typename T, class = TypeTemplates::EnableIfIntegralType<T>>
 class IntegralTypePrinter {
@@ -25,6 +26,12 @@ private:
 
     static constexpr size_t typeSize = sizeof(T) - 1;
 };
+
+template<typename T, typename ... Args>
+void printArgs(std::ostream &stream, const T &firstArg, const Args& ... args) {
+    stream << firstArg;
+    (void) std::initializer_list<int>{((stream << '.' << args), 0)...};
+}
 
 //Prints integral type
 template<typename T>
@@ -48,6 +55,27 @@ print_ip(const Container<T> &param) {
               std::experimental::make_ostream_joiner(std::cout, "."));
 
     std::cout << std::endl;
+}
+
+template<typename ... Ts>
+std::ostream &operator<<(std::ostream &stream, const std::tuple<Ts...> &param) {
+
+    auto printToStream = [&stream] (const auto&... args) {
+        printArgs(stream, args ... );
+    };
+
+    std::apply(printToStream, param);
+
+    return stream;
+}
+
+//print tuple
+template<typename T, typename... Args>
+typename TypeTemplates::EnableIfAllTheSame<T, Args...>
+print_ip(const std::tuple<T, Args... >&params) {
+    using namespace TypeTemplates;
+
+    std::cout << params;
 }
 
 #endif //IPPRINTERS_H
