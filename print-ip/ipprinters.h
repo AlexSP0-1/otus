@@ -6,6 +6,10 @@
 #include <experimental/iterator>
 #include <tuple>
 
+
+/*! \brief Prints integral types
+ *
+ */
 template<typename T, class = TypeTemplates::EnableIfIntegralType<T>>
 class IntegralTypePrinter {
 public:
@@ -33,21 +37,30 @@ void printArgs(std::ostream &stream, const T &firstArg, const Args& ... args) {
     (void) std::initializer_list<int>{((stream << '.' << args), 0)...};
 }
 
-//Prints integral type
+/*! \brief Prints integral types
+ *
+ * Template function for printing integral types. Uses IntegralTypePrinter
+ */
 template<typename T>
 typename TypeTemplates::EnableIfIntegralType<T>
 print_ip(const T &param) {
     std::cout << IntegralTypePrinter(param) << std::endl;
 }
 
-//prints string
+/*! \brief Prints std::string
+ *
+ * Template function for printing std::string.
+ */
 template <typename T>
 typename TypeTemplates::EnableIfStringType<T>
 print_ip(const T &param) {
     std::cout << param <<std::endl;
 }
 
-//prints container
+/*! \brief Prints containers
+ *
+ * Template function for printing containters, such as std::vector and std:list.
+ */
 template<typename T, template<typename> class Container>
 typename TypeTemplates::EnableIfContainerType<T, Container>
 print_ip(const Container<T> &param) {
@@ -69,7 +82,10 @@ std::ostream &operator<<(std::ostream &stream, const std::tuple<Ts...> &param) {
     return stream;
 }
 
-//print tuple
+/** \brief Prints std::tuple
+ *
+ * Template function for printing std::tuple.
+ */
 template<typename T, typename... Args>
 typename TypeTemplates::EnableIfAllTheSame<T, Args...>
 print_ip(const std::tuple<T, Args... >&params) {
