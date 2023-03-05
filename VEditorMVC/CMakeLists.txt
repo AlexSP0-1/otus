@@ -14,9 +14,13 @@ set(CMAKE_AUTORCC ON)
 set(CMAKE_CXX_STANDARD 17)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
 
+add_subdirectory(primitives)
+
 add_executable(VEditorMVC
   main.cpp
 )
+
+target_link_libraries(VEditorMVC PRIVATE graph_primitives)
 
 if (MSVC)
     target_compile_options(VEditorMVC PRIVATE
