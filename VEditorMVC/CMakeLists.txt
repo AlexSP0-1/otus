@@ -18,6 +18,15 @@ add_subdirectory(primitives)
 
 add_executable(VEditorMVC
     imodel.h
+    model.h
+    model.cpp
+    icontroller.h
+    controller.h
+    controller.cpp
+    painter.h
+    painter.cpp
+    view.h
+    view.cpp
     observable.h
     observable.cpp
     iobserver.h

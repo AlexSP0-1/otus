@@ -1,8 +1,8 @@
 #ifndef IPAINTER_H
 #define IPAINTER_H
 
+#include "basetypes.h"
 #include <string>
-#include <basetypes.h>
 
 /*! \brief This is painter common interface for drawing primitives
  *

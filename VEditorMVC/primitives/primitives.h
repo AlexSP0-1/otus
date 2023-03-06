@@ -8,7 +8,7 @@ class GraphPrimitiveObject : public IGraphPrimitiveObject
 public:
     GraphPrimitiveObject(const Point &location);
 
-    virtual ~GraphPrimitiveObject();
+    virtual ~GraphPrimitiveObject() = default;
 
 public:
     void draw(IPainter *painter) const override;
