@@ -17,7 +17,11 @@ set(CMAKE_CXX_STANDARD_REQUIRED ON)
 add_subdirectory(primitives)
 
 add_executable(VEditorMVC
-  main.cpp
+    imodel.h
+    observable.h
+    observable.cpp
+    iobserver.h
+    main.cpp
 )
 
 target_link_libraries(VEditorMVC PRIVATE graph_primitives)

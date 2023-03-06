@@ -6,6 +6,10 @@
 
 #include <map>
 
+/*! \brief Registry of primitive types
+ *
+ */
+
 class RegistryPrimitives
 {
 public:

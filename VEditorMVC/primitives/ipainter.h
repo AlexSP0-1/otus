@@ -2,8 +2,7 @@
 #define IPAINTER_H
 
 #include <string>
-
-class Point;
+#include <basetypes.h>
 
 /*! \brief This is painter common interface for drawing primitives
  *
