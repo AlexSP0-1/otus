@@ -7,7 +7,7 @@ struct Point
     int yCoord = 0;
 };
 
-enum PrimitiveTypes
+enum PrimitiveType
 {
     POINT,
     LINE,
