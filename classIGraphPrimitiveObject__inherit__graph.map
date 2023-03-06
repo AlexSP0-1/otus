@@ -1,0 +1,7 @@
+<map id="IGraphPrimitiveObject" name="IGraphPrimitiveObject">
+<area shape="rect" id="node1" title="This interface is common for all primitives." alt="" coords="110,5,261,31"/>
+<area shape="rect" id="node2" href="$classGraphPrimitiveObject.html" title=" " alt="" coords="112,79,259,104"/>
+<area shape="rect" id="node3" href="$classCirclePrimitive.html" title=" " alt="" coords="5,152,112,177"/>
+<area shape="rect" id="node4" href="$classLinePrimitive.html" title=" " alt="" coords="136,152,235,177"/>
+<area shape="rect" id="node5" href="$classPointPrimitive.html" title=" " alt="" coords="259,152,362,177"/>
+</map>

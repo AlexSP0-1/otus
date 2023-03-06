@@ -1,0 +1,4 @@
+<map id="Painter" name="Painter">
+<area shape="rect" id="node1" title=" " alt="" coords="7,79,70,104"/>
+<area shape="rect" id="node2" href="$classIPainter.html" title="This is painter common interface for drawing primitives." alt="" coords="5,5,72,31"/>
+</map>
