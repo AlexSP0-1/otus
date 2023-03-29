@@ -19,6 +19,11 @@ set(CMAKE_CXX_STANDARD 17)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
 
 add_executable(${NAME_EXECUTABLE}
+    key.h
+    hash.h
+    extypes.h
+
+    sparsematrix.h
     main.cpp
 )
 
