@@ -3,7 +3,9 @@ cmake_minimum_required(VERSION 3.14)
 set(NAME_EXECUTABLE "sparsematrix")
 set(NAME_TESTS "sparsematrix-tests")
 
-project(${NAME_EXECUTABLE} VERSION 0.0.1 LANGUAGES CXX)
+set(PROJECT_VERSION 0.0.${PATCH_VERSION})
+
+project(${NAME_EXECUTABLE} VERSION ${PROJECT_VERSION} LANGUAGES CXX)
 
 option(WITH_GTEST "Whether to build google test" ON)
 
