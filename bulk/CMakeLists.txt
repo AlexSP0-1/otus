@@ -16,10 +16,13 @@ set(CMAKE_AUTORCC ON)
 set(CMAKE_CXX_STANDARD 17)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
 
+add_subdirectory(model)
 
-add_executable(bulk
+add_executable(${NAME_EXECUTABLE}
   main.cpp
 )
+
+target_link_libraries(${NAME_EXECUTABLE} model)
 
 target_include_directories(${NAME_EXECUTABLE}
     PRIVATE "${CMAKE_BINARY_DIR}"
