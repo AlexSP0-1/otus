@@ -23,6 +23,9 @@ add_subdirectory(options)
 
 add_executable(${NAME_EXECUTABLE}
     bayantypes.h
+    ihandler.h
+    filefinder.h
+    filefinder.cpp
     main.cpp
 )
 
