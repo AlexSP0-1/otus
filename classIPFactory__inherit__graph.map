@@ -1,0 +1,11 @@
+<map id="IPFactory" name="IPFactory">
+<area shape="rect" id="Node000001" title="This interface is common for all factories." alt="" coords="209,5,286,31"/>
+<area shape="rect" id="Node000002" href="$classBasePrimitiveFactory.html" title=" " alt="" coords="175,79,320,105"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="250,46,250,79,245,79,245,46"/>
+<area shape="rect" id="Node000003" href="$classCirclePrimitiveFactory.html" title=" " alt="" coords="5,153,154,178"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="207,113,109,155,107,150,205,108"/>
+<area shape="rect" id="Node000004" href="$classLinePrimitiveFactory.html" title=" " alt="" coords="177,153,318,178"/>
+<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="250,119,250,152,245,152,245,119"/>
+<area shape="rect" id="Node000005" href="$classPointPrimitiveFactory.html" title=" " alt="" coords="342,153,487,178"/>
+<area shape="poly" id="edge4_Node000002_Node000005" title=" " alt="" coords="290,109,387,150,385,155,288,113"/>
+</map>

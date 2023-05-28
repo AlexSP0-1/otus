@@ -1,0 +1,13 @@
+<map id="Graphical Class Hierarchy" name="Graphical Class Hierarchy">
+<area shape="rect" id="Node000000" href="$classICommandModel.html" title=" " alt="" coords="5,5,125,31"/>
+<area shape="rect" id="Node000001" href="$classBulkModel.html" title=" " alt="" coords="173,55,255,80"/>
+<area shape="poly" id="edge6_Node000000_Node000001" title=" " alt="" coords="121,34,173,52,172,57,119,39"/>
+<area shape="rect" id="Node000002" href="$classIModelIterator.html" title=" " alt="" coords="14,55,116,80"/>
+<area shape="poly" id="edge7_Node000002_Node000001" title=" " alt="" coords="131,65,172,65,172,70,131,70"/>
+<area shape="rect" id="Node000003" href="$classObservable.html" title=" " alt="" coords="21,104,109,130"/>
+<area shape="poly" id="edge8_Node000003_Node000001" title=" " alt="" coords="119,96,172,78,173,83,121,101"/>
+<area shape="rect" id="Node000004" href="$classIModel.html" title="This is painter common interface for models." alt="" coords="184,104,244,130"/>
+<area shape="poly" id="edge9_Node000003_Node000004" title=" " alt="" coords="124,114,183,114,183,120,124,120"/>
+<area shape="rect" id="Node000005" href="$classModel.html" title=" " alt="" coords="303,104,359,130"/>
+<area shape="poly" id="edge10_Node000004_Node000005" title=" " alt="" coords="258,114,302,114,302,120,258,120"/>
+</map>

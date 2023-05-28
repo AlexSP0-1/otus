@@ -1,0 +1,20 @@
+<map id="VEditorMVC/view.h" name="VEditorMVC/view.h">
+<area shape="rect" id="Node000001" title=" " alt="" coords="286,5,419,31"/>
+<area shape="rect" id="Node000002" href="$imodel_8h.html" title=" " alt="" coords="234,79,303,105"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="340,34,295,72,292,67,337,30"/>
+<area shape="rect" id="Node000005" href="$iobserver_8h.html" title=" " alt="" coords="394,226,479,252"/>
+<area shape="poly" id="edge10_Node000001_Node000005" title=" " alt="" coords="361,30,385,82,414,152,432,212,427,213,409,154,380,85,356,33"/>
+<area shape="rect" id="Node000003" title=" " alt="" coords="217,226,270,252"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="269,105,250,212,245,211,264,105"/>
+<area shape="rect" id="Node000004" href="$VEditorMVC_2observable_8h.html" title=" " alt="" coords="305,153,400,178"/>
+<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="284,103,329,141,326,145,281,107"/>
+<area shape="rect" id="Node000007" href="$basetypes_8h.html" title=" " alt="" coords="5,226,156,252"/>
+<area shape="poly" id="edge6_Node000002_Node000007" title=" " alt="" coords="234,96,198,100,158,110,119,127,102,139,88,154,81,167,77,182,78,212,72,212,72,181,76,165,84,151,99,135,116,122,156,105,197,95,233,91"/>
+<area shape="rect" id="Node000008" href="$ipainter_8h.html" title=" " alt="" coords="98,153,231,178"/>
+<area shape="poly" id="edge7_Node000002_Node000008" title=" " alt="" coords="252,107,196,146,193,142,249,103"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="368,177,413,215,410,219,365,181"/>
+<area shape="rect" id="Node000006" title=" " alt="" coords="313,226,371,252"/>
+<area shape="poly" id="edge5_Node000004_Node000006" title=" " alt="" coords="353,179,348,212,343,211,348,178"/>
+<area shape="poly" id="edge9_Node000008_Node000003" title=" " alt="" coords="180,177,221,214,218,218,176,181"/>
+<area shape="poly" id="edge8_Node000008_Node000007" title=" " alt="" coords="152,181,107,219,104,215,149,177"/>
+</map>

@@ -1,0 +1,21 @@
+<map id="bulk/loggers/consolelogger.cpp" name="bulk/loggers/consolelogger.cpp">
+<area shape="rect" id="Node000001" title=" " alt="" coords="162,5,361,31"/>
+<area shape="rect" id="Node000002" href="$consolelogger_8h.html" title=" " alt="" coords="131,79,242,105"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="251,33,211,71,208,67,247,30"/>
+<area shape="rect" id="Node000010" title=" " alt="" coords="267,79,405,105"/>
+<area shape="poly" id="edge9_Node000001_Node000010" title=" " alt="" coords="276,30,315,67,311,71,272,33"/>
+<area shape="rect" id="Node000003" href="$observer_8h.html" title=" " alt="" coords="59,153,189,178"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="178,107,146,143,142,140,174,103"/>
+<area shape="rect" id="Node000009" title=" " alt="" coords="214,153,285,178"/>
+<area shape="poly" id="edge8_Node000002_Node000009" title=" " alt="" coords="199,103,231,140,227,143,195,107"/>
+<area shape="rect" id="Node000004" href="$imodeliterator_8h.html" title=" " alt="" coords="69,226,179,252"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="127,179,127,211,121,211,121,179"/>
+<area shape="rect" id="Node000005" href="$modeliterator_8h.html" title=" " alt="" coords="71,300,177,326"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="127,252,127,285,121,285,121,252"/>
+<area shape="rect" id="Node000006" title=" " alt="" coords="5,374,67,399"/>
+<area shape="poly" id="edge5_Node000005_Node000006" title=" " alt="" coords="111,328,64,366,60,362,107,324"/>
+<area shape="rect" id="Node000007" title=" " alt="" coords="90,374,158,399"/>
+<area shape="poly" id="edge6_Node000005_Node000007" title=" " alt="" coords="127,326,127,359,121,359,121,326"/>
+<area shape="rect" id="Node000008" title=" " alt="" coords="182,374,239,399"/>
+<area shape="poly" id="edge7_Node000005_Node000008" title=" " alt="" coords="140,324,187,362,183,366,137,328"/>
+</map>

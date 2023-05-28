@@ -1,0 +1,23 @@
+<map id="bulk/loggers/filelogger.cpp" name="bulk/loggers/filelogger.cpp">
+<area shape="rect" id="Node000001" title=" " alt="" coords="236,5,407,31"/>
+<area shape="rect" id="Node000002" href="$filelogger_8h.html" title=" " alt="" coords="83,79,165,105"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="289,34,172,76,170,71,287,29"/>
+<area shape="rect" id="Node000009" title=" " alt="" coords="190,79,328,105"/>
+<area shape="poly" id="edge8_Node000001_Node000009" title=" " alt="" coords="313,33,281,70,277,66,309,29"/>
+<area shape="rect" id="Node000010" title=" " alt="" coords="351,79,417,105"/>
+<area shape="poly" id="edge9_Node000001_Node000010" title=" " alt="" coords="334,29,366,66,362,70,330,33"/>
+<area shape="rect" id="Node000011" title=" " alt="" coords="440,79,512,105"/>
+<area shape="poly" id="edge10_Node000001_Node000011" title=" " alt="" coords="349,29,437,70,435,75,346,34"/>
+<area shape="rect" id="Node000003" href="$observer_8h.html" title=" " alt="" coords="59,153,189,178"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="127,105,127,138,121,138,121,105"/>
+<area shape="rect" id="Node000004" href="$imodeliterator_8h.html" title=" " alt="" coords="69,226,179,252"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="127,179,127,211,121,211,121,179"/>
+<area shape="rect" id="Node000005" href="$modeliterator_8h.html" title=" " alt="" coords="71,300,177,326"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="127,252,127,285,121,285,121,252"/>
+<area shape="rect" id="Node000006" title=" " alt="" coords="5,374,67,399"/>
+<area shape="poly" id="edge5_Node000005_Node000006" title=" " alt="" coords="111,328,64,366,60,362,107,324"/>
+<area shape="rect" id="Node000007" title=" " alt="" coords="90,374,158,399"/>
+<area shape="poly" id="edge6_Node000005_Node000007" title=" " alt="" coords="127,326,127,359,121,359,121,326"/>
+<area shape="rect" id="Node000008" title=" " alt="" coords="182,374,239,399"/>
+<area shape="poly" id="edge7_Node000005_Node000008" title=" " alt="" coords="140,324,187,362,183,366,137,328"/>
+</map>

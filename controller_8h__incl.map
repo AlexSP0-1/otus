@@ -1,0 +1,22 @@
+<map id="VEditorMVC/controller.h" name="VEditorMVC/controller.h">
+<area shape="rect" id="Node000001" title=" " alt="" coords="28,5,187,31"/>
+<area shape="rect" id="Node000002" href="$icontroller_8h.html" title=" " alt="" coords="13,79,100,105"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="101,33,76,68,71,65,97,30"/>
+<area shape="rect" id="Node000004" href="$imodel_8h.html" title=" " alt="" coords="150,79,219,105"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="122,30,163,67,159,71,118,34"/>
+<area shape="rect" id="Node000003" href="$basetypes_8h.html" title=" " alt="" coords="5,226,156,252"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="59,105,60,138,64,178,74,211,68,213,59,179,55,138,54,105"/>
+<area shape="poly" id="edge8_Node000004_Node000003" title=" " alt="" coords="163,108,134,127,108,154,94,183,86,213,81,211,89,181,104,151,131,123,160,103"/>
+<area shape="rect" id="Node000005" title=" " alt="" coords="215,226,269,252"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="213,103,242,123,255,136,266,152,270,167,269,184,259,214,254,212,264,183,265,168,261,154,251,139,238,127,210,108"/>
+<area shape="rect" id="Node000006" href="$VEditorMVC_2observable_8h.html" title=" " alt="" coords="325,153,420,178"/>
+<area shape="poly" id="edge5_Node000004_Node000006" title=" " alt="" coords="217,103,328,145,326,149,215,108"/>
+<area shape="rect" id="Node000009" href="$ipainter_8h.html" title=" " alt="" coords="118,153,251,178"/>
+<area shape="poly" id="edge9_Node000004_Node000009" title=" " alt="" coords="187,105,187,138,182,138,182,105"/>
+<area shape="rect" id="Node000007" href="$iobserver_8h.html" title=" " alt="" coords="312,226,396,252"/>
+<area shape="poly" id="edge6_Node000006_Node000007" title=" " alt="" coords="372,179,363,212,358,211,367,178"/>
+<area shape="rect" id="Node000008" title=" " alt="" coords="420,226,477,252"/>
+<area shape="poly" id="edge7_Node000006_Node000008" title=" " alt="" coords="387,177,427,214,423,218,384,181"/>
+<area shape="poly" id="edge10_Node000009_Node000003" title=" " alt="" coords="168,181,112,220,109,215,165,177"/>
+<area shape="poly" id="edge11_Node000009_Node000005" title=" " alt="" coords="196,177,225,213,221,216,192,180"/>
+</map>

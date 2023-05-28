@@ -1,0 +1,22 @@
+<map id="bayan/options/clparser.h" name="bayan/options/clparser.h">
+<area shape="rect" id="Node000001" title=" " alt="" coords="226,5,387,31"/>
+<area shape="rect" id="Node000002" href="$ioptions_8h.html" title=" " alt="" coords="118,79,194,105"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="282,34,195,75,193,70,280,29"/>
+<area shape="rect" id="Node000009" title=" " alt="" coords="218,79,395,105"/>
+<area shape="poly" id="edge9_Node000001_Node000009" title=" " alt="" coords="309,31,309,64,304,64,304,31"/>
+<area shape="rect" id="Node000010" title=" " alt="" coords="419,79,487,105"/>
+<area shape="poly" id="edge10_Node000001_Node000010" title=" " alt="" coords="332,29,416,70,414,75,330,34"/>
+<area shape="rect" id="Node000003" title=" " alt="" coords="5,153,85,178"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="138,107,77,147,74,142,135,103"/>
+<area shape="rect" id="Node000004" title=" " alt="" coords="120,234,173,260"/>
+<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="156,105,150,153,149,219,143,219,145,152,151,105"/>
+<area shape="rect" id="Node000005" title=" " alt="" coords="160,153,218,178"/>
+<area shape="poly" id="edge4_Node000002_Node000005" title=" " alt="" coords="164,104,180,138,175,140,159,106"/>
+<area shape="rect" id="Node000006" href="$bayantypes_8h.html" title=" " alt="" coords="241,153,348,178"/>
+<area shape="poly" id="edge5_Node000002_Node000006" title=" " alt="" coords="180,103,259,143,257,148,178,108"/>
+<area shape="poly" id="edge8_Node000006_Node000004" title=" " alt="" coords="273,181,183,229,181,224,271,176"/>
+<area shape="rect" id="Node000007" title=" " alt="" coords="209,226,356,267"/>
+<area shape="poly" id="edge6_Node000006_Node000007" title=" " alt="" coords="295,179,290,212,285,211,290,178"/>
+<area shape="rect" id="Node000008" title=" " alt="" coords="380,234,433,260"/>
+<area shape="poly" id="edge7_Node000006_Node000008" title=" " alt="" coords="313,177,379,223,376,227,310,181"/>
+</map>

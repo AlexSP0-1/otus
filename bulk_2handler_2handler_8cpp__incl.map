@@ -1,0 +1,28 @@
+<map id="bulk/handler/handler.cpp" name="bulk/handler/handler.cpp">
+<area shape="rect" id="Node000001" title=" " alt="" coords="119,5,280,31"/>
+<area shape="rect" id="Node000002" href="$bulk_2handler_2handler_8h.html" title=" " alt="" coords="163,79,236,105"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="202,31,202,64,197,64,197,31"/>
+<area shape="rect" id="Node000003" title=" " alt="" coords="5,153,77,178"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="174,108,82,149,80,144,172,103"/>
+<area shape="rect" id="Node000004" title=" " alt="" coords="101,153,162,178"/>
+<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="190,107,155,144,151,140,187,103"/>
+<area shape="rect" id="Node000005" title=" " alt="" coords="217,374,284,399"/>
+<area shape="poly" id="edge4_Node000002_Node000005" title=" " alt="" coords="204,105,248,359,243,360,199,105"/>
+<area shape="rect" id="Node000006" title=" " alt="" coords="516,374,569,399"/>
+<area shape="poly" id="edge5_Node000002_Node000006" title=" " alt="" coords="237,94,326,110,382,124,441,144,500,171,556,205,605,247,643,299,648,311,647,323,633,343,610,360,584,373,581,369,607,356,629,340,642,321,642,312,639,301,601,251,553,209,498,176,439,149,381,129,325,115,236,100"/>
+<area shape="rect" id="Node000007" href="$commandsfactory_8h.html" title=" " alt="" coords="241,153,375,178"/>
+<area shape="poly" id="edge6_Node000002_Node000007" title=" " alt="" coords="219,103,279,142,276,147,217,107"/>
+<area shape="poly" id="edge15_Node000007_Node000005" title=" " alt="" coords="302,180,278,227,262,298,254,359,249,359,256,297,273,225,297,177"/>
+<area shape="rect" id="Node000008" href="$commands_8h.html" title=" " alt="" coords="405,226,501,252"/>
+<area shape="poly" id="edge7_Node000007_Node000008" title=" " alt="" coords="333,176,417,217,414,222,331,181"/>
+<area shape="rect" id="Node000011" title=" " alt="" coords="287,226,334,252"/>
+<area shape="poly" id="edge14_Node000007_Node000011" title=" " alt="" coords="311,178,312,211,307,211,305,179"/>
+<area shape="poly" id="edge13_Node000008_Node000006" title=" " alt="" coords="463,251,530,359,525,362,458,254"/>
+<area shape="rect" id="Node000009" href="$icommandmodel_8h.html" title=" " alt="" coords="288,300,463,326"/>
+<area shape="poly" id="edge8_Node000008_Node000009" title=" " alt="" coords="442,255,401,292,398,288,438,251"/>
+<area shape="rect" id="Node000010" href="$icommand_8h.html" title=" " alt="" coords="538,300,629,326"/>
+<area shape="poly" id="edge11_Node000008_Node000010" title=" " alt="" coords="476,250,550,290,547,295,474,255"/>
+<area shape="poly" id="edge9_Node000009_Node000005" title=" " alt="" coords="356,329,285,368,283,364,353,324"/>
+<area shape="poly" id="edge10_Node000009_Node000006" title=" " alt="" coords="405,324,503,365,501,370,403,329"/>
+<area shape="poly" id="edge12_Node000010_Node000006" title=" " alt="" coords="579,327,559,362,554,359,575,325"/>
+</map>

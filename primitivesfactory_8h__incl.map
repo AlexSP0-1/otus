@@ -1,0 +1,17 @@
+<map id="VEditorMVC/primitives/primitivesfactory.h" name="VEditorMVC/primitives/primitivesfactory.h">
+<area shape="rect" id="Node000001" title=" " alt="" coords="50,5,203,46"/>
+<area shape="rect" id="Node000002" href="$ipfactory_8h.html" title=" " alt="" coords="125,94,205,120"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="138,45,155,79,150,81,134,48"/>
+<area shape="rect" id="Node000003" href="$igraphprimitive_8h.html" title=" " alt="" coords="30,168,146,193"/>
+<area shape="poly" id="edge8_Node000001_Node000003" title=" " alt="" coords="124,47,97,154,92,153,119,46"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="154,122,113,159,110,155,150,118"/>
+<area shape="rect" id="Node000007" title=" " alt="" coords="170,168,238,193"/>
+<area shape="poly" id="edge7_Node000002_Node000007" title=" " alt="" coords="174,119,193,153,188,156,169,121"/>
+<area shape="rect" id="Node000004" href="$basetypes_8h.html" title=" " alt="" coords="5,315,96,341"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="87,194,60,301,55,300,82,193"/>
+<area shape="rect" id="Node000005" href="$ipainter_8h.html" title=" " alt="" coords="89,241,162,267"/>
+<area shape="poly" id="edge4_Node000003_Node000005" title=" " alt="" coords="96,192,115,227,110,229,92,195"/>
+<area shape="poly" id="edge5_Node000005_Node000004" title=" " alt="" coords="114,269,75,307,72,303,111,266"/>
+<area shape="rect" id="Node000006" title=" " alt="" coords="120,315,173,341"/>
+<area shape="poly" id="edge6_Node000005_Node000006" title=" " alt="" coords="131,266,141,300,136,302,126,268"/>
+</map>

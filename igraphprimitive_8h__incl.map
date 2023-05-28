@@ -1,0 +1,10 @@
+<map id="VEditorMVC/primitives/igraphprimitive.h" name="VEditorMVC/primitives/igraphprimitive.h">
+<area shape="rect" id="Node000001" title=" " alt="" coords="12,5,164,46"/>
+<area shape="rect" id="Node000002" href="$basetypes_8h.html" title=" " alt="" coords="5,168,96,193"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="86,47,59,154,54,153,81,46"/>
+<area shape="rect" id="Node000003" href="$ipainter_8h.html" title=" " alt="" coords="89,94,162,120"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="99,45,116,79,111,81,95,48"/>
+<area shape="poly" id="edge3_Node000003_Node000002" title=" " alt="" coords="114,122,75,159,72,155,111,118"/>
+<area shape="rect" id="Node000004" title=" " alt="" coords="120,168,173,193"/>
+<area shape="poly" id="edge4_Node000003_Node000004" title=" " alt="" coords="131,119,141,153,136,154,126,121"/>
+</map>

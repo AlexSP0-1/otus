@@ -1,0 +1,7 @@
+<map id="IModel" name="IModel">
+<area shape="rect" id="Node000001" title="This is painter common interface for models." alt="" coords="19,79,79,105"/>
+<area shape="rect" id="Node000003" href="$classModel.html" title=" " alt="" coords="21,153,77,178"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="52,119,52,152,46,152,46,119"/>
+<area shape="rect" id="Node000002" href="$classObservable.html" title=" " alt="" coords="5,5,93,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="52,46,52,79,46,79,46,46"/>
+</map>

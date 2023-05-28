@@ -1,0 +1,11 @@
+<map id="VEditorMVC/painter.h" name="VEditorMVC/painter.h">
+<area shape="rect" id="Node000001" title=" " alt="" coords="92,5,237,31"/>
+<area shape="rect" id="Node000002" href="$basetypes_8h.html" title=" " alt="" coords="5,153,156,178"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="140,34,111,53,88,80,80,109,79,138,74,138,75,108,83,78,108,49,137,29"/>
+<area shape="rect" id="Node000003" href="$ipainter_8h.html" title=" " alt="" coords="98,79,231,105"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="167,31,167,64,162,64,162,31"/>
+<area shape="rect" id="Node000004" title=" " alt="" coords="221,153,274,178"/>
+<area shape="poly" id="edge5_Node000001_Node000004" title=" " alt="" coords="192,29,221,49,246,78,254,108,254,138,249,138,249,109,241,80,218,53,189,34"/>
+<area shape="poly" id="edge3_Node000003_Node000002" title=" " alt="" coords="152,107,107,145,104,141,149,103"/>
+<area shape="poly" id="edge4_Node000003_Node000004" title=" " alt="" coords="180,103,224,141,221,145,177,107"/>
+</map>

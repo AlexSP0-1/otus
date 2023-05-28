@@ -1,0 +1,40 @@
+<map id="bayan/main.cpp" name="bayan/main.cpp">
+<area shape="rect" id="Node000001" title=" " alt="" coords="326,5,438,31"/>
+<area shape="rect" id="Node000002" href="$clparser_8h.html" title=" " alt="" coords="184,79,308,105"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="360,34,283,74,281,69,358,29"/>
+<area shape="rect" id="Node000012" href="$filefinder_8h.html" title=" " alt="" coords="343,79,421,105"/>
+<area shape="poly" id="edge12_Node000001_Node000012" title=" " alt="" coords="385,31,385,64,379,64,379,31"/>
+<area shape="rect" id="Node000014" href="$bayan_2handler_8h.html" title=" " alt="" coords="451,79,524,105"/>
+<area shape="poly" id="edge18_Node000001_Node000014" title=" " alt="" coords="401,29,459,68,456,73,398,34"/>
+<area shape="rect" id="Node000003" href="$ioptions_8h.html" title=" " alt="" coords="449,153,526,178"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="288,103,436,146,434,151,286,108"/>
+<area shape="rect" id="Node000010" title=" " alt="" coords="5,153,183,178"/>
+<area shape="poly" id="edge10_Node000002_Node000010" title=" " alt="" coords="221,108,134,148,132,144,219,103"/>
+<area shape="rect" id="Node000011" title=" " alt="" coords="207,153,274,178"/>
+<area shape="poly" id="edge11_Node000002_Node000011" title=" " alt="" coords="248,105,245,138,240,137,242,105"/>
+<area shape="rect" id="Node000004" title=" " alt="" coords="325,226,404,252"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="468,181,400,221,397,216,465,177"/>
+<area shape="rect" id="Node000005" title=" " alt="" coords="462,308,515,333"/>
+<area shape="poly" id="edge4_Node000003_Node000005" title=" " alt="" coords="485,180,470,227,471,261,480,293,475,295,466,262,465,226,479,178"/>
+<area shape="rect" id="Node000006" title=" " alt="" coords="480,226,537,252"/>
+<area shape="poly" id="edge5_Node000003_Node000006" title=" " alt="" coords="493,178,503,211,498,213,488,179"/>
+<area shape="rect" id="Node000007" href="$bayantypes_8h.html" title=" " alt="" coords="561,226,667,252"/>
+<area shape="poly" id="edge6_Node000003_Node000007" title=" " alt="" coords="510,177,581,216,579,221,508,181"/>
+<area shape="poly" id="edge9_Node000007_Node000005" title=" " alt="" coords="596,255,521,302,519,297,594,250"/>
+<area shape="rect" id="Node000008" title=" " alt="" coords="641,300,787,341"/>
+<area shape="poly" id="edge7_Node000007_Node000008" title=" " alt="" coords="631,250,680,289,676,293,628,255"/>
+<area shape="rect" id="Node000009" title=" " alt="" coords="564,308,616,333"/>
+<area shape="poly" id="edge8_Node000007_Node000009" title=" " alt="" coords="613,253,601,294,595,292,608,252"/>
+<area shape="poly" id="edge17_Node000012_Node000003" title=" " alt="" coords="401,103,459,142,456,146,398,107"/>
+<area shape="poly" id="edge13_Node000012_Node000004" title=" " alt="" coords="371,107,353,127,339,154,337,168,339,184,351,213,346,215,334,185,332,168,334,152,349,124,367,103"/>
+<area shape="poly" id="edge14_Node000012_Node000011" title=" " alt="" coords="359,108,279,148,276,143,357,103"/>
+<area shape="rect" id="Node000013" href="$ihandler_8h.html" title=" " alt="" coords="349,153,426,178"/>
+<area shape="poly" id="edge15_Node000012_Node000013" title=" " alt="" coords="386,105,388,137,383,138,380,105"/>
+<area shape="poly" id="edge16_Node000013_Node000004" title=" " alt="" coords="386,179,375,213,370,211,381,178"/>
+<area shape="poly" id="edge22_Node000014_Node000003" title=" " alt="" coords="490,105,490,138,485,138,485,105"/>
+<area shape="poly" id="edge21_Node000014_Node000013" title=" " alt="" coords="472,107,418,146,415,141,469,103"/>
+<area shape="rect" id="Node000015" title=" " alt="" coords="644,153,709,178"/>
+<area shape="poly" id="edge19_Node000014_Node000015" title=" " alt="" coords="520,103,632,145,630,150,519,108"/>
+<area shape="rect" id="Node000016" title=" " alt="" coords="549,153,620,178"/>
+<area shape="poly" id="edge20_Node000014_Node000016" title=" " alt="" coords="505,103,558,142,555,146,502,107"/>
+</map>

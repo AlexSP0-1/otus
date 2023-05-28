@@ -1,0 +1,18 @@
+<map id="bulk/handler/commandsfactory.h" name="bulk/handler/commandsfactory.h">
+<area shape="rect" id="Node000001" title=" " alt="" coords="246,5,454,31"/>
+<area shape="rect" id="Node000002" href="$commands_8h.html" title=" " alt="" coords="99,79,194,105"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="317,34,196,76,194,71,315,29"/>
+<area shape="rect" id="Node000004" title=" " alt="" coords="254,226,321,252"/>
+<area shape="poly" id="edge9_Node000001_Node000004" title=" " alt="" coords="353,32,347,96,340,138,327,179,308,215,303,213,323,177,334,137,342,95,347,31"/>
+<area shape="rect" id="Node000007" title=" " alt="" coords="387,79,433,105"/>
+<area shape="poly" id="edge8_Node000001_Node000007" title=" " alt="" coords="362,30,393,66,389,69,358,33"/>
+<area shape="rect" id="Node000003" href="$icommandmodel_8h.html" title=" " alt="" coords="137,153,313,178"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="161,103,203,141,199,145,158,107"/>
+<area shape="rect" id="Node000005" title=" " alt="" coords="41,226,94,252"/>
+<area shape="poly" id="edge7_Node000002_Node000005" title=" " alt="" coords="99,103,51,121,30,135,13,154,8,170,13,186,25,201,40,215,36,219,21,205,9,188,3,170,8,151,26,131,49,116,97,98"/>
+<area shape="rect" id="Node000006" href="$icommand_8h.html" title=" " alt="" coords="22,153,113,178"/>
+<area shape="poly" id="edge5_Node000002_Node000006" title=" " alt="" coords="135,107,93,145,90,141,131,103"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="237,177,270,213,266,217,233,180"/>
+<area shape="poly" id="edge4_Node000003_Node000005" title=" " alt="" coords="199,181,109,222,107,217,197,176"/>
+<area shape="poly" id="edge6_Node000006_Node000005" title=" " alt="" coords="70,179,70,211,65,211,65,179"/>
+</map>

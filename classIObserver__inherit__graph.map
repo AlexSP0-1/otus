@@ -1,0 +1,9 @@
+<map id="IObserver" name="IObserver">
+<area shape="rect" id="Node000001" title=" " alt="" coords="140,5,219,31"/>
+<area shape="rect" id="Node000002" href="$classConsoleLogger.html" title=" " alt="" coords="5,79,114,105"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="148,41,81,81,79,76,145,37"/>
+<area shape="rect" id="Node000003" href="$classFileLogger.html" title=" " alt="" coords="138,79,221,105"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="182,46,182,79,177,79,177,46"/>
+<area shape="rect" id="Node000004" href="$classView.html" title=" " alt="" coords="245,79,295,105"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="208,38,257,77,253,81,205,42"/>
+</map>

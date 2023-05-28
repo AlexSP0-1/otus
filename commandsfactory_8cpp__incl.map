@@ -1,0 +1,20 @@
+<map id="bulk/handler/commandsfactory.cpp" name="bulk/handler/commandsfactory.cpp">
+<area shape="rect" id="Node000001" title=" " alt="" coords="239,5,461,31"/>
+<area shape="rect" id="Node000002" href="$commandsfactory_8h.html" title=" " alt="" coords="283,79,417,105"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="353,31,353,64,348,64,348,31"/>
+<area shape="rect" id="Node000003" href="$commands_8h.html" title=" " alt="" coords="99,153,194,178"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="317,108,196,150,194,145,315,103"/>
+<area shape="rect" id="Node000005" title=" " alt="" coords="254,300,321,326"/>
+<area shape="poly" id="edge10_Node000002_Node000005" title=" " alt="" coords="353,105,347,169,340,211,327,253,308,289,303,286,323,251,334,210,342,169,347,105"/>
+<area shape="rect" id="Node000008" title=" " alt="" coords="387,153,433,178"/>
+<area shape="poly" id="edge9_Node000002_Node000008" title=" " alt="" coords="362,103,393,139,389,143,358,107"/>
+<area shape="rect" id="Node000004" href="$icommandmodel_8h.html" title=" " alt="" coords="137,226,313,252"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="161,177,203,214,199,218,158,181"/>
+<area shape="rect" id="Node000006" title=" " alt="" coords="41,300,94,326"/>
+<area shape="poly" id="edge8_Node000003_Node000006" title=" " alt="" coords="99,177,51,194,30,209,13,228,8,243,13,259,25,275,40,289,36,293,21,278,9,262,3,243,8,225,26,205,49,190,97,172"/>
+<area shape="rect" id="Node000007" href="$icommand_8h.html" title=" " alt="" coords="22,226,113,252"/>
+<area shape="poly" id="edge6_Node000003_Node000007" title=" " alt="" coords="135,181,93,218,90,214,131,177"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="237,250,270,287,266,291,233,254"/>
+<area shape="poly" id="edge5_Node000004_Node000006" title=" " alt="" coords="199,255,109,296,107,291,197,250"/>
+<area shape="poly" id="edge7_Node000007_Node000006" title=" " alt="" coords="70,252,70,285,65,285,65,252"/>
+</map>

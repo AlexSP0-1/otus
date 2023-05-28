@@ -1,0 +1,34 @@
+<map id="VEditorMVC/model.h" name="VEditorMVC/model.h">
+<area shape="rect" id="Node000001" title=" " alt="" coords="170,5,311,31"/>
+<area shape="rect" id="Node000002" title=" " alt="" coords="5,374,63,399"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="190,34,140,52,90,78,69,96,52,116,41,138,37,164,37,241,37,359,31,359,31,241,31,164,36,137,47,113,65,92,87,74,138,47,188,29"/>
+<area shape="rect" id="Node000003" href="$igraphprimitive_8h.html" title=" " alt="" coords="250,226,426,252"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="248,30,329,212,324,214,243,32"/>
+<area shape="rect" id="Node000007" href="$registryprimitives_8h.html" title=" " alt="" coords="421,79,610,105"/>
+<area shape="poly" id="edge7_Node000001_Node000007" title=" " alt="" coords="288,29,456,72,454,77,287,34"/>
+<area shape="rect" id="Node000011" href="$imodel_8h.html" title=" " alt="" coords="157,226,226,252"/>
+<area shape="poly" id="edge13_Node000001_Node000011" title=" " alt="" coords="241,32,200,213,195,212,235,31"/>
+<area shape="rect" id="Node000004" href="$basetypes_8h.html" title=" " alt="" coords="320,374,410,399"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="351,251,367,272,379,299,382,331,377,360,371,359,377,331,374,301,362,275,347,254"/>
+<area shape="rect" id="Node000005" href="$ipainter_8h.html" title=" " alt="" coords="291,300,364,326"/>
+<area shape="poly" id="edge4_Node000003_Node000005" title=" " alt="" coords="339,253,334,286,329,285,334,252"/>
+<area shape="poly" id="edge5_Node000005_Node000004" title=" " alt="" coords="336,325,354,359,349,362,331,327"/>
+<area shape="rect" id="Node000006" title=" " alt="" coords="238,374,291,399"/>
+<area shape="poly" id="edge6_Node000005_Node000006" title=" " alt="" coords="319,328,287,364,283,361,315,324"/>
+<area shape="poly" id="edge8_Node000007_Node000004" title=" " alt="" coords="523,104,532,132,540,170,542,212,538,233,531,253,506,291,473,323,438,349,405,369,403,364,435,345,470,319,502,288,526,251,533,232,536,212,535,170,527,133,518,106"/>
+<area shape="rect" id="Node000008" href="$ipfactory_8h.html" title=" " alt="" coords="437,153,517,178"/>
+<area shape="poly" id="edge9_Node000007_Node000008" title=" " alt="" coords="511,106,492,141,488,138,507,104"/>
+<area shape="rect" id="Node000010" title=" " alt="" coords="591,153,637,178"/>
+<area shape="poly" id="edge12_Node000007_Node000010" title=" " alt="" coords="534,103,587,142,584,146,531,107"/>
+<area shape="poly" id="edge10_Node000008_Node000003" title=" " alt="" coords="454,181,376,221,373,217,452,177"/>
+<area shape="rect" id="Node000009" title=" " alt="" coords="450,226,517,252"/>
+<area shape="poly" id="edge11_Node000008_Node000009" title=" " alt="" coords="480,178,483,211,478,212,475,179"/>
+<area shape="poly" id="edge18_Node000011_Node000004" title=" " alt="" coords="204,250,238,284,281,324,335,363,332,367,278,328,234,288,200,254"/>
+<area shape="poly" id="edge19_Node000011_Node000005" title=" " alt="" coords="216,250,293,290,290,295,213,255"/>
+<area shape="poly" id="edge14_Node000011_Node000006" title=" " alt="" coords="200,251,236,324,254,359,250,362,232,327,195,254"/>
+<area shape="rect" id="Node000012" href="$VEditorMVC_2observable_8h.html" title=" " alt="" coords="71,300,165,326"/>
+<area shape="poly" id="edge15_Node000011_Node000012" title=" " alt="" coords="181,254,143,291,139,288,177,250"/>
+<area shape="poly" id="edge17_Node000012_Node000002" title=" " alt="" coords="105,328,61,366,57,362,102,324"/>
+<area shape="rect" id="Node000013" href="$iobserver_8h.html" title=" " alt="" coords="87,374,171,399"/>
+<area shape="poly" id="edge16_Node000012_Node000013" title=" " alt="" coords="122,325,127,359,122,359,117,326"/>
+</map>
