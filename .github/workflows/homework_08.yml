@@ -1,0 +1,58 @@
+name: 'bayan'
+
+on:
+  push:
+    paths:
+      - 'bayan/**'
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: ./bayan
+    steps:
+      - uses: actions/checkout@v3
+        with:
+          submodules: true
+      - run: sudo apt-get update && sudo apt-get install libboost-all-dev -y
+      - run: cmake . -DPATCH_VERSION=${{ github.run_number }}
+      - run: cmake --build .
+      - run: cmake --build . --target package
+      - name: Create release
+        id: create_release
+        uses: actions/create-release@v1
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        with:
+          tag_name: $ {{ github.run_number }}
+          release_name: bayan ${{ github.run_number }}
+          draft: true
+          prerelease: false
+      - name: Upload Release Asset
+        id: upload-release-asset
+        uses: actions/upload-release-asset@v1
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        with:
+          upload_url: ${{ steps.create_release.outputs.upload_url }}
+          asset_path: /home/runner/work/otus/otus/bayan/bayan-0.0.${{ github.run_number }}-Linux.deb
+          asset_name: bayan-0.0.${{ github.run_number }}-Linux.deb
+          asset_content_type: application/vnd.debian.binary-package
+      - name: Install doxygen
+        run: sudo apt-get install doxygen -y
+        shell: bash
+      - name: Generate Doxygen Documentation
+        uses: mattnotmitt/doxygen-action@v1.1.0
+        with:
+          working-directory: .
+          doxyfile-path: ./bayan/Doxyfile
+      - name: GH Pages Deployment
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./doc/html/
+          enable_jekyll: false
+          allow_empty_commit: false
+          force_orphan: true
+          publish_branch: gh-pages
